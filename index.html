@@ -1,25 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>My Website</title>
-  <style>
-    /* CSS styles go here */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-    }
+    <head>
+        <title> Michael Jackson </title>
+        <meta charset="utf8">
+        <style>
+            #image{
+                border: 2px solid black;
+                transform: skew(none);
+                transition: transform 0.5 ease;
+                text-align: center;
+            }
 
-    h1 {
-      color: #333;
-    }
+            #jacksonDiv{
+                text-align: center;
+            }
+            
+            #toggleButton{
+                padding: 10px;
+                background-color: #3498db;
+                color: white;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+</html>
 
-    p {
-      color: #666;
-    }
-  </style>
-</head>
+
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>This is a basic HTML site with some CSS styling.</p>
+    <div id="jacksonDiv">
+    <img id="image" src="jackson.jpg" alt="Michael Jackson" width="30%" height="30%">
+    <br>
+    <br>
+    <br>
+    <h1> Oh WOWIE!!! It's the pop king, Michael Jackson! </h1>
+    <h2> Press the button and make him lean! </h2>
+    <button id="toggleButton" onclick="toggleImageStyle()">Boogie!</button>
+    <audio id="audio1" src="michael_scream.mp3"></audio>
+    <audio id="audio2" src="michael_heehee.mp3"></audio>
+    <script>
+        var isImageSkewed = false;
+
+        function toggleImageStyle() {
+        var imageElement = document.getElementById('image');
+        var audioElement = isImageSkewed ? document.getElementById('audio2') : document.getElementById('audio1');
+    
+        if (isImageSkewed) {
+            imageElement.style.transform = 'none';
+        } else {
+            imageElement.style.transform = 'skew(-50deg, 0)';
+        }
+    
+          // Play the corresponding audio
+        audioElement.play();
+          isImageSkewed = !isImageSkewed; // Toggle the state
+        }
+    </script>
+
+
+
+
+
+
+
+
+    </div>
 </body>
 </html>
