@@ -1,6 +1,6 @@
-/*html {
+html {
   scroll-behavior: smooth;
-}*/
+}
 body::-webkit-scrollbar {
   display: none;
 }
@@ -88,7 +88,6 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  text-align: center;
 }
 .pizza-item:hover ul {
   display: none;
@@ -156,7 +155,8 @@ body {
   margin-top: 20px;
 }
 .prisady ul {
-  columns: 3;
+  columns: 4;
+  text-align: center;
   list-style: none;
 }
 .prisady li {
