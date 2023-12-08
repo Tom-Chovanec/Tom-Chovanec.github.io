@@ -1,68 +1,157 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Michael Jackson </title>
-        <meta charset="utf8">
-        <style>
-            #image{
-                border: 2px solid black;
-                transform: skew(none);
-                transition: transform 0.5 ease;
-                text-align: center;
-            }
-
-            #jacksonDiv{
-                text-align: center;
-            }
-            
-            #toggleButton{
-                padding: 10px;
-                background-color: #3498db;
-                color: white;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-</html>
-
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="itpizza.css">
+  <title>IT PIZZA</title>
+</head>
 <body>
-    <div id="jacksonDiv">
-    <img id="image" src="jackson.jpg" alt="Michael Jackson" width="30%" height="30%">
-    <br>
-    <br>
-    <br>
-    <h1> Oh WOWIE!!! It's the pop king, Michael Jackson! </h1>
-    <h2> Press the button and make him lean! </h2>
-    <button id="toggleButton" onclick="toggleImageStyle()">Boogie!</button>
-    <audio id="audio1" src="michael_scream.mp3"></audio>
-    <audio id="audio2" src="michael_heehee.mp3"></audio>
-    <script>
-        var isImageSkewed = false;
-
-        function toggleImageStyle() {
-        var imageElement = document.getElementById('image');
-        var audioElement = isImageSkewed ? document.getElementById('audio2') : document.getElementById('audio1');
-    
-        if (isImageSkewed) {
-            imageElement.style.transform = 'none';
-        } else {
-            imageElement.style.transform = 'skew(-50deg, 0)';
-        }
-    
-          // Play the corresponding audio
-        audioElement.play();
-          isImageSkewed = !isImageSkewed; // Toggle the state
-        }
-    </script>
-
-
-
-
-
-
-
-
+  <header>
+    <div class="header">
+      <h1>IT PIZZA</h1>
     </div>
+    <div class="navbar">
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#akcia">Akcia</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+  </header>
+
+  <section id="menu">
+    <div class="pizza-grid">
+      <div class="pizza-item">
+        <h2>Margerita</h2>
+        <ul>
+          <li>paradjková omáčka</li>
+          <li>mozzarella</li>
+        </ul>
+      </div>
+      <div class="pizza-item">
+        <h2>Hawai</h2>
+        <ul>
+          <li>paradjková omáčka</li>
+          <li>mozzarella</li>
+          <li>šunka</li>
+          <li>ananás</li>
+        </ul>
+      </div>
+      <div class="pizza-item">
+        <h2>Cardinale</h2>
+        <ul>
+          <li>paradjková omáčka</li>
+          <li>mozzarella</li>
+          <li>pepperoni</li>
+          <li>šampiňóny</li>
+        </ul>
+      </div>
+      <div class="pizza-item">
+        <h2>Quattro Formaggi</h2>
+        <ul>
+          <li>paradjková omáčka</li>
+          <li>mozzarella</li>
+          <li>plesnivý syr</li>
+          <li>encián</li>
+          <li>hermelín</li>
+        </ul>
+      </div>
+      <div class="pizza-item">
+        <h2>Chicken</h2>
+        <ul>
+          <li>paradjková omáčka</li>
+          <li>mozzarella</li>
+          <li>šunka</li>
+          <li>kuracie kúsky</li>
+        </ul>
+      </div>
+      <div class="pizza-item">
+        <h2>Pepperoni</h2>
+        <ul>
+          <li>paradjková omáčka</li>
+          <li>mozzarella</li>
+          <li>pepperoni</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+    
+  <section id="akcia">
+    <div class="akcia">
+      <h2>Akcia</h2>
+      <p>Každý pondelok pri kúpe troch pízz poďľa ľubovolného výberu máte najlacnejšiu z nich zadarmo</p>
+  </section>
+
+  <section id="prisady">
+    <div class="prisady">
+      <h2>Prísady</h2>
+      <ul>
+        <li>šunka</li>
+        <li>kukurica</li>
+        <li>syr</li>
+        <li>pepperoni</li>
+        <li>mozzarella</li>
+        <li>ananás</li>
+        <li>šampiňóny</li>
+        <li>plesnivý syr</li>
+        <li>encián</li>
+        <li>hermelín</li>
+        <li>cibuľa</li>
+        <li>olivy</li>
+        <li>kápia</li>
+      </ul>
+    </div>
+
+  <section id="galeria">
+    <div class="galeria-grid">
+      <div class="galeria-item">
+        <img src="obrazky/margerita.jpg" alt="margerita">
+      </div>
+      <div class="galeria-item">
+        <img src="obrazky/hawai.jpg" alt="hawai">
+      </div>
+      <div class="galeria-item">
+        <img src="obrazky/cardinale.jpg" alt="cardinale">
+      </div>
+      <div class="galeria-item">
+        <img src="obrazky/quattroformaggi.jfif" alt="quattroformaggi">
+      </div>
+      <div class="galeria-item">
+        <img src="obrazky/chicken.jpg" alt="chicken">
+      </div>
+      <div class="galeria-item">
+        <img src="obrazky/pepperoni.jpg" alt="pepperoni">
+      </div>
+    </div>
+  </section>
+
+  <footer id="kontakt">
+    <div class="footer">
+      <div class="kontakt">
+        <h2>Kontakt</h2>
+        <ul>
+          <li>Nábrežná 1366</li>
+          <li>024 04 Kysucké Nové Mesto</li>
+          <li>tel.č.:+421999123456;</li>
+          <li>e-mail: knm@pizza.sk</li>
+        </ul>
+      </div>
+      <div class="social">
+        <h2>Sociálne siete</h2>
+        <ul>
+          <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.twitter.com/" target="_blank">Twitter</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <ul>
+          <li>© 2023 IT PIZZA</li>
+          <li>Tomáš Chovanec 2023</li>
+        </ul>
+      </div>
+    </div>  
+  </footer>
+    
 </body>
-</html>

@@ -1,0 +1,146 @@
+
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
+}
+
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-color: #424242;
+  padding: 15px;
+  padding-top: 20px;
+
+}
+
+h1 {
+  margin: 0;
+}
+
+body {
+  margin-top: 170px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 0 20px;
+}
+@media (max-width: 767px) {
+  .pizza-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 0 2%;
+  }
+}
+
+.pizza-item {
+  color: white;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  padding: 20px;
+  border: black 1px solid;
+  border-radius: 5px;
+}
+.pizza-item h2 {
+  font-size: 30px;
+}
+.pizza-item ul{
+  margin-top: 20%;
+  font-size: larger;
+}
+
+.pizza-item:nth-child(1) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url("obrazky/margerita.jpg");
+}
+.pizza-item:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url("obrazky/hawai.jpg");
+}
+.pizza-item:nth-child(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url("obrazky/cardinale.jpg");
+}
+.pizza-item:nth-child(4) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url("obrazky/quattroformaggi.jpg");
+}
+.pizza-item:nth-child(5){
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url("obrazky/chicken.jpg");
+}
+.pizza-item:nth-child(6){
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url("obrazky/pepperoni.jpg");
+}
+
+.pizza-item h2 {
+  text-align: center;
+}
+
+.akcia {
+  margin-top: 20px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.akcia p {
+  font-size: 20px;
+}
+
+.prisady {
+  margin-top: 20px;
+  /* text-align: center;; */
+}
+.prisady ul {
+  columns: 3;
+  list-style: none;
+}
+.prisady li {
+  margin-bottom: 10px;
+}
+
+.galeria-grid {
+  border: 1px solid black;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  padding: 0 20px;
+}
+
+.galeria-item img {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.footer {
+  border: 1px solid black;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 0 20px;
+
+}
+
+.footer ul {
+  list-style: none;
+}
+.footer .copyright {
+  display: flex;
+  align-items: flex-end;  
+  height: 100%;
+  margin: auto;
+}
