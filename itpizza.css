@@ -1,6 +1,6 @@
-html {
+/*html {
   scroll-behavior: smooth;
-}
+}*/
 body::-webkit-scrollbar {
   display: none;
 }
@@ -63,6 +63,7 @@ body {
 }
 
 .pizza-item {
+  position: relative;
   color: white;
   background-size: cover;
   background-position: center;
@@ -75,7 +76,11 @@ body {
 .pizza-item h3 {
   display: none;
 }
-
+.pizza-item:hover {
+  transform: scale(1.05);
+  transform: rotate(36000deg);
+  transition: transform 0.5s ease-in-out;
+}
 .pizza-item:hover h3 {
   position: absolute;
   top: 0;
@@ -120,9 +125,6 @@ body {
 
 .pizza-item h2 {
   text-align: center;
-}
-.pizza-item {
-  position: relative;
 }
 
 
