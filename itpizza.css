@@ -1,26 +1,39 @@
-
+/*html {
+  scroll-behavior: smooth;
+}*/
 body::-webkit-scrollbar {
   display: none;
 }
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;  
+  scroll-padding-top: 1000px;
 }
-
-
-
-
 header {
+  border-bottom: 1px solid black;
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
-  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  color: black;
   text-align: center;
-  background-color: #424242;
+  background-color: #d7891c;
   padding: 15px;
-  padding-top: 20px;
-
+}
+.navbar {
+  padding-top: 10px;
+}
+.navbar a{
+  color: black;
+  text-decoration: none;
+  font-size: larger;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navbar a:hover{
+  color: white;
 }
 
 h1 {
@@ -28,17 +41,20 @@ h1 {
 }
 
 body {
-  margin-top: 170px;
+  margin-top: 120px;
   font-family: 'Roboto', sans-serif;
 }
 
+#menu, #akcia, #prisady, #galeria, #kontakt {
+  scroll-margin-top: 110px;
+}
 .pizza-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   padding: 0 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .pizza-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
@@ -50,16 +66,37 @@ body {
   color: white;
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 260px;
   padding: 20px;
   border: black 1px solid;
   border-radius: 5px;
+}
+
+.pizza-item h3 {
+  display: none;
+}
+
+.pizza-item:hover h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+}
+.pizza-item:hover ul {
+  display: none;
 }
 .pizza-item h2 {
   font-size: 30px;
 }
 .pizza-item ul{
-  margin-top: 20%;
   font-size: larger;
 }
 
@@ -85,21 +122,38 @@ body {
 .pizza-item h2 {
   text-align: center;
 }
-
-.akcia {
-  margin-top: 20px;
-  text-align: center;
-  border: 2px solid black;
-  border-radius: 5px;
+.pizza-item {
+  position: relative;
 }
 
+
+
+.akcia {
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+  flex-direction: column;
+}
+.akcia h2 {
+  color: white;
+  font-size: xx-large;
+  margin: 0;
+  background-color: #d7891c;
+  border: 1px solid black;
+
+}
 .akcia p {
-  font-size: 20px;
+  font-size: x-large;
+  border: 1px solid black;
+  padding: 5px;
+  margin-top: 0;
+  border-top: none;
+
 }
 
 .prisady {
   margin-top: 20px;
-  /* text-align: center;; */
 }
 .prisady ul {
   columns: 3;
@@ -132,7 +186,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   padding: 0 20px;
-
 }
 
 .footer ul {
