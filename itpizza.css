@@ -79,7 +79,7 @@ body {
 .pizza-item:hover {
   transform: scale(1.05);
   transform: rotate(36000deg);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 4s ease-in-out;
 }
 .pizza-item:hover h3 {
   position: absolute;
