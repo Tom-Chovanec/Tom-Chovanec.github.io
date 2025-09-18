@@ -1,0 +1,30 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222831;
+    transition: background-color 0.5s ease;
+}
+
+#colorButton {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 3px solid #eeeeee;
+    color: #eeeeee;
+    transition: background-color 0.5s ease, color 0.5s ease,
+        border-color 0.5s ease;
+}
+
+#colorButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
